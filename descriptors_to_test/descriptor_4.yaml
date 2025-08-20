@@ -1,0 +1,62 @@
+id: urn:dmb:dp:cards:updating-cards-registry:4
+kind: dataproduct
+environment: development
+name: updating_card_registry
+description: updating_card_registry
+domain: cards
+components:
+- id: urn:dmb:cmp:carte:updating-cards-registry:4:registry-cards-variations:0
+  kind: outputport
+  dataContract:
+    schema:
+    - name: transactionId
+      dataType: string
+      description: unique identifier for the transaction
+    - name: sourceTimestamp
+      dataType: string
+      description: timestamp when the record was created in the source database
+    - name: applicationTimestamp
+      dataType: string
+      description: timestamp when the record was applied in the source database
+    - name: userId
+      dataType: string
+      description: identifier of the user who performed the operation
+    - name: operationType
+      dataType: string
+      description: type of operation performed on the record
+    - name: sourceTableName
+      dataType: string
+      description: name of the source table
+    - name: cardHolderNDG
+      dataType: string
+      description: NDG of the card holder
+    - name: cardHolderTaxCode
+      dataType: string
+      description: tax code of the card holder
+    - name: cardHolderVATNumber
+      dataType: string
+      description: VAT number of the card holder
+    - name: cardStateCode
+      dataType: string
+      description: code representing the state of the card
+    - name: cardStateDescription
+      dataType: string
+      description: description of the card state
+    - name: relationshipBranch
+      dataType: string
+      description: branch of the relationship
+    - name: relationshipNumber
+      dataType: string
+      description: number of the relationship
+    - name: relationshipCategory
+      dataType: string
+      description: category of the relationship
+    - name: relationshipType
+      dataType: string
+      description: type of the relationship
+    - name: subjectPositionId
+      dataType: string
+      description: identifier for the subject position
+    - name: subjectTitleId
+      dataType: string
+      description: identifier for the subject title

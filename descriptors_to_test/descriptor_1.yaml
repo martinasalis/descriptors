@@ -1,0 +1,66 @@
+id: urn:dmb:dp:cards:updating-cards-registry:1
+kind: dataproduct
+environment: development
+name: updating_card_registry
+description: updating_card_registry
+domain: cards
+components:
+- id: urn:dmb:cmp:carte:updating-cards-registry:1:registry-cards-variations:0
+  kind: outputport
+  dataContract:
+    schema:
+    - name: txId
+      dataType: string
+      description: id record on source DB
+    - name: sourceTs
+      dataType: string
+      description: timestamp's production record on source DB
+    - name: applyTs
+      dataType: string
+      description: timestamp's application record on source DB
+    - name: user
+      dataType: string
+      description: user id that performed the operation
+    - name: operation
+      dataType: string
+      description: record operation
+    - name: sourceTable
+      dataType: string
+      description: table source
+    - name: ndg
+      dataType: string
+      description: card's holder NDG
+    - name: tax_code
+      dataType: string
+      description: card's holder tax code
+    - name: vat_number
+      dataType: string
+      description: card's holder VAT number
+    - name: state_value
+      dataType: string
+      description: code of the card state
+    - name: state_description
+      dataType: string
+      description: description of the card state
+- id: urn:dmb:cmp:carte:updating-cards-registry:1:registry-cards-variations:1
+  kind: outputport
+  dataContract:
+    schema:
+    - name: branch
+      dataType: string
+      description: relationship branch
+    - name: number
+      dataType: string
+      description: number of relationship
+    - name: account_category
+      dataType: string
+      description: category of relationship
+    - name: account_type
+      dataType: string
+      description: type of relationship
+    - name: id_sogg_pos
+      dataType: string
+      description:
+    - name: id_sogg_tito
+      dataType: string
+      description:

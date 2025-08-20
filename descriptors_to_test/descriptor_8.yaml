@@ -1,0 +1,23 @@
+id: urn:dmb:cmp:customercare:customer-onboarding:0
+kind: dataproduct
+environment: development
+name: customer onboarding
+description: customer onboarding
+domain: customercare
+components:
+- id: urn:dmb:cmp:customercare:customer-onboarding:0:customer-onboarding-optimization
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: INT
+      description: Unique identifier for the customer
+      name: customerId
+    - dataType: STRING
+      description: Current step in the customer onboarding process
+      name: onboardingStep
+    - dataType: DOUBLE
+      description: Time taken to complete the onboarding step (in minutes)
+      name: stepDuration
+    - dataType: STRING
+      description: Indicates if the onboarding step was completed successfully
+      name: stepCompletionFlag

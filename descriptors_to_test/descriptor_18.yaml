@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:customercare:support-tickets:0
+kind: dataproduct
+environment: development
+name: customer support tickets
+description: detailed records of customer support requests and their resolution status
+domain: customercare
+components:
+- id: urn:dmb:cmp:customercare:support-tickets:0:support-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: ticket_id
+      description: unique identifier for the support ticket
+    - dataType: string
+      name: customer_id
+      description: identifier of the customer who submitted the request
+    - dataType: string
+      name: issue_type
+      description: type of issue reported by the customer (e.g., technical, billing)
+    - dataType: string
+      name: channel
+      description: communication channel used (e.g., email, phone, chat)
+    - dataType: string
+      name: priority
+      description: priority level assigned to the ticket (e.g., low, medium, high)
+    - dataType: date
+      name: opened_date
+      description: date when the ticket was opened
+    - dataType: string
+      name: assigned_agent
+      description: support agent currently assigned to the ticket
+    - dataType: string
+      name: status
+      description: current status of the ticket (e.g., open, in progress, resolved)
+    - dataType: date
+      name: resolution_date
+      description: date when the ticket was resolved
+    - dataType: string
+      name: resolution_summary
+      description: brief summary of the actions taken to resolve the issue

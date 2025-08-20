@@ -1,0 +1,45 @@
+id: urn:dmb:cmp:finance:customer-credit-risk:0
+kind: dataproduct
+environment: development
+name: customer credit risk
+description: assessment of credit risk for individual customers
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:customer-credit-risk:0:risk-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: customer_id
+      description: unique identifier for the customer
+    - dataType: double
+      name: credit_score
+      description: numerical score indicating creditworthiness
+    - dataType: string
+      name: risk_category
+      description: risk category assigned based on credit history and behavior
+    - dataType: double
+      name: default_probability
+      description: estimated probability of default within the next 12 months
+    - dataType: date
+      name: score_last_updated
+      description: date when the credit score was last calculated
+- id: urn:dmb:cmp:finance:customer-credit-risk:0:risk-outputport:1
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: region
+      description: geographical region of the customer
+    - dataType: string
+      name: employment_status
+      description: current employment status of the customer
+    - dataType: double
+      name: annual_income
+      description: reported annual income of the customer
+    - dataType: boolean
+      name: has_mortgage
+      description: indicates whether the customer has an existing mortgage
+    - dataType: date
+      name: registration_date
+      description: date the customer account was created

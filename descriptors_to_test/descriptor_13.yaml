@@ -1,0 +1,38 @@
+id: urn:dmb:cmp:finance:cashflow:2
+kind: dataproduct
+environment: development
+name: cashflow
+description: cashflow
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:cashflow:2:cashflow-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: id_cahflow
+      description: identifier
+    - dataType: string
+      name: direction
+      description: direction
+    - dataType: number
+      name: Amount
+      description: amount
+    - dataType: string
+      description: operation id
+      name: operation_id
+    - dataType: string
+      description: operation type (e.g., credit, debit)
+      name: operation_type
+    - dataType: number
+      description: operation amount
+      name: operation_amount
+    - dataType: string
+      description: operation currency
+      name: trans_currency
+    - dataType: date
+      description: operation date
+      name: trans_date
+    - dataType: string
+      description: operation method
+      name: trans_method

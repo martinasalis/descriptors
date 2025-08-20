@@ -1,0 +1,105 @@
+id: urn:dmb:dp:cards:updating-cards-registry:0
+kind: dataproduct
+environment: development
+name: updating_card_registry
+description: updating_card_registry
+domain: cards
+components:
+- id: urn:dmb:cmp:carte:updating-cards-registry:0:registry-cards-variations:0
+  kind: outputport
+  dataContract:
+    schema:
+    - name: audit.txId
+      dataType: string
+      description: id record Kafka
+    - name: audit.sourceTs
+      dataType: string
+      description: production timestamp record on source DB
+    - name: audit.applyTs
+      dataType: string
+      description: production timestamp record on topic
+    - name: audit.user
+      dataType: string
+      description: user id that generated the record on source DB
+    - name: audit.operation
+      dataType: string
+      description: operation performed on the record
+    - name: audit.sourceTable
+      dataType: string
+      description: table where the record was generated on source DB
+    - name: holder.ndg
+      dataType: string
+      description: NDG card's holder
+    - name: holder.tc
+      dataType: string
+      description: tax code card's holder
+    - name: holder.vnum
+      dataType: string
+      description: vat number card's holder
+    - name: holderPosition.ndg
+      dataType: string
+      description: NDG position/guarantor card
+    - name: holderPosition.tx
+      dataType: string
+      description: tax code position/guarantor card
+    - name: holderPosition.vnum
+      dataType: string
+      description: vat number position/guarantor card
+    - name: alias
+      dataType: string
+      description: unique identifier card
+    - name: numCard
+      dataType: string
+      description: printed card number with asterisks
+    - name: typeDisp
+      dataType: string
+      description: not significant
+    - name: prod.cod
+      dataType: string
+      description: identifier code card product
+    - name: prod.nameProd
+      dataType: string
+      description: commercial name card product
+    - name: stateTp.value
+      dataType: string
+      description: state card code
+    - name: stateTp.description
+      dataType: string
+      description: state card description
+- id: urn:dmb:cmp:carte:updating-cards-registry:0:registry-cards-variations:1
+  kind: outputport
+  dataContract:
+    schema:
+    - name: account.branch
+      dataType: string
+      description: branch of the relationship
+    - name: account.number
+      dataType: string
+      description: relationship number
+    - name: account.category
+      dataType: string
+      description: relationship category
+    - name: account.type
+      dataType: string
+      description: type of relationship
+    - name: date.request
+      dataType: string
+      description: date request card
+    - name: date.emission
+      dataType: string
+      description: data emission card
+    - name: date.delivery
+      dataType: string
+      description: card delivery date
+    - name: e.extinction
+      dataType: string
+      description: date of card extinction
+    - name: date.expiry
+      dataType: string
+      description: card expiry date
+    - name: idSogg.pos
+      dataType: string
+      description: not significant
+    - name: idSogg.tito
+      dataType: string
+      description: not significant

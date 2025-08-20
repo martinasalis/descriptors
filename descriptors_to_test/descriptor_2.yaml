@@ -1,0 +1,85 @@
+id: urn:dmb:dp:cards:updating-cards-registry:2
+kind: dataproduct
+environment: development
+name: updating_card_registry
+description: updating_card_registry
+domain: cards
+components:
+- id: urn:dmb:cmp:carte:updating-cards-registry:2:registry-cards-variations:0
+  kind: outputport
+  dataContract:
+    schema:
+    - name: audit_txId
+      dataType: string
+      description: record id
+    - name: audit_sourceTs
+      dataType: string
+      description: timestamp indicating when the record was created in the source database
+    - name: audit_applyTs
+      dataType: string
+      description: timestamp indicating when the record was applied in the source database
+    - name: audit_user
+      dataType: string
+      description: user identifier that created the record in the source database
+    - name: audit_operation
+      dataType: string
+      description: type of operation performed on the record
+    - name: audit_sourceTable
+      dataType: string
+      description: table in the source database where the record was generated
+    - name: holder_tc
+      dataType: string
+      description: tax identification number of the card's holder
+    - name: holder_vnum
+      dataType: string
+      description: VAT number of the card's holder
+    - name: holder_ndg
+      dataType: string
+      description: position card NDG
+    - name: holder_tx
+      dataType: string
+      description: tax code card
+    - name: holder_position_vnum
+      dataType: string
+      description: vat number position card
+    - name: id_card
+      dataType: string
+      description: unique identifier for the card
+- id: urn:dmb:cmp:carte:updating-cards-registry:2:registry-cards-variations:1
+  kind: outputport
+  dataContract:
+    schema:
+    - name: acc_branch
+      dataType: string
+      description: branch of the account
+    - name: acc_number
+      dataType: string
+      description: unique identifier for the account relationship
+    - name: acc_category
+      dataType: string
+      description: category of the relationship
+    - name: acc_type
+      dataType: string
+      description: type of account relationship
+- id: urn:dmb:cmp:carte:updating-cards-registry:2:registry-cards-variations:2
+  kind: outputport
+  dataContract:
+    schema:
+    - name: number_card
+      dataType: string
+      description: masked card number with asterisks
+    - name: type_disp
+      dataType: string
+      description:
+    - name: product_cod
+      dataType: string
+      description: code identifying the card product
+    - name: product_name
+      dataType: string
+      description: commercial name of the card product
+    - name: state_value
+      dataType: string
+      description: state card code
+    - name: state_description
+      dataType: string
+      description: description of the card

@@ -1,0 +1,55 @@
+id: urn:dmb:cmp:finance:cashflow:0
+kind: dataproduct
+environment: development
+name: cashflow
+description: cashflow
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:cashflow:0:cashflow-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: ID
+      description:
+    - dataType: string
+      name: Direction
+      description:
+    - dataType: number
+      name: Amount
+      description:
+- id: urn:dmb:cmp:finance:cashflow:0:cashflow-outputport:1
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      description: global addressable identifier for a counterparty. The counterparty
+        can be a customer or a third party (supplier, market, institution, etc)
+      name: counterpartyId
+    - dataType: string
+      description: 'the global id of the product anagrafic   '
+      name: productId
+    - dataType: string
+      description: the global id of the deal
+      name: dealId
+    - dataType: string
+      description: currency of the cashflow
+      name: currency
+    - dataType: string
+      description: the reference accounting period the cashflow is applied to
+      name: accounting_period
+    - dataType: string
+      description: the direction of the cashflow - Incoming/Outgoing
+      name: direction
+    - dataType: date
+      description: when the cash will be materialized
+      name: reference_date
+    - dataType: number
+      description: the amount of incoing/outgoing cash, according to the direction
+      name: amount
+    - dataType: string
+      description: type of cashflow, if it is actual or forecasted
+      name: type
+    - dataType: date
+      description: date of cashflow
+      name: last_update

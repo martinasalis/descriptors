@@ -1,0 +1,47 @@
+id: urn:dmb:cmp:finance:cashflow:4
+kind: dataproduct
+environment: development
+name: cashflow
+description: cashflow
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:cashflow:4:cashflow-outputport:2
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      description: globally addressable identifier for a counterparty
+      name: id_counterparty
+    - dataType: string
+      description: 'the global id of the product anagrafic   '
+      name: id_product
+    - dataType: string
+      description: the global id of the deal
+      name: deal_identifier
+    - dataType: string
+      description: the currency in which the cashflow is denominated
+      name: currency
+    - dataType: string
+      description: the accounting period to which the cashflow pertains
+      name: accounting_period
+    - dataType: string
+      description: cashflow direction, if it is incoming or outgoing
+      name: direction
+    - dataType: date
+      description: the date when the cashflow will be realized
+      name: reference_date
+    - dataType: number
+      description: the amount of incoming or outgoing cash
+      name: amount
+    - dataType: string
+      description: type of cashflow
+      name: type
+    - dataType: string
+      description: operation id
+      name: operation_id
+    - dataType: string
+      description: operation type (e.g., credit, debit)
+      name: operation_type
+    - dataType: date
+      description: date of cashflow
+      name: last_update

@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:finance:payment-records:0
+kind: dataproduct
+environment: development
+name: payment records
+description: structured data related to incoming and outgoing payments
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:payment-records:0:payment-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: payment_id
+      description: globally unique identifier for the payment
+    - dataType: string
+      name: payer_id
+      description: unique ID of the entity sending the payment
+    - dataType: string
+      name: payee_id
+      description: unique ID of the entity receiving the payment
+    - dataType: string
+      name: payment_method
+      description: method used for the payment (e.g., bank transfer, PayPal)
+    - dataType: number
+      name: amount
+      description: monetary value of the payment
+    - dataType: string
+      name: currency
+      description: currency used in the transaction
+    - dataType: date
+      name: payment_date
+      description: the date when the payment occurred
+    - dataType: string
+      name: status
+      description: status of the payment (e.g., processed, failed, pending)
+    - dataType: string
+      name: transaction_reference
+      description: reference code associated with the financial transaction
+    - dataType: string
+      name: payment_note
+      description: optional note or comment related to the payment

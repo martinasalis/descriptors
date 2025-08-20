@@ -1,0 +1,36 @@
+id: urn:dmb:cmp:customercare:customer-onboarding:1
+kind: dataproduct
+environment: development
+name: customer onboarding
+description: customer onboarding
+domain: customercare
+components:
+- id: urn:dmb:cmp:customercare:customer-onboarding:1:customer-onboarding-optimization:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: INT
+      description: Unique id for the client
+      name: clientId
+    - dataType: STRING
+      description: Current stage in the customer onboarding journey
+      name: onboardingStage
+    - dataType: DOUBLE
+      description: Period of the onboarding step
+      name: stepPeriod
+    - dataType: STRING
+      description: Indicates whether the onboarding step was successfully completed
+      name: stepTag
+- id: urn:dmb:cmp:customercare:customer-onboarding:1:customer-onboarding-optimization:1
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: STRING
+      description: Optimization algorithm used for customer onboarding
+      name: optimizationAlgorithm
+    - dataType: DOUBLE
+      description: Score indicating the effectiveness of the onboarding process
+      name: onboardingScore
+    - dataType: STRING
+      description: Status of the optimization process
+      name: optimizationStatus

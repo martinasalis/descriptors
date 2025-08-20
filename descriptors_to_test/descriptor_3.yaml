@@ -1,0 +1,63 @@
+id: urn:dmb:dp:cards:updating-cards-registry:3
+kind: dataproduct
+environment: development
+name: updating_card_registry
+description: updating_card_registry
+domain: cards
+components:
+- id: urn:dmb:cmp:carte:updating-cards-registry:3:registry-cards-variations:0
+  kind: outputport
+  dataContract:
+    schema:
+    - name: record
+      dataType: string
+      description: record id
+    - name: source_timestamp
+      dataType: string
+      description: timestamp indicating when the record was sourced from the database
+    - name: apply_timestamp
+      dataType: string
+      description: timestamp indicating when the record was applied to the source database
+    - name: user
+      dataType: string
+      description: user identifier that created the record
+    - name: operation
+      dataType: string
+      description: type of operation executed on the record
+    - name: source_table
+      dataType: string
+      description: table in the source database
+    - name: tax_code
+      dataType: string
+      description: tax code of the cardholder
+    - name: vat_number
+      dataType: string
+      description: VAT number associated with the cardholder
+- id: urn:dmb:cmp:carte:updating-cards-registry:3:registry-cards-variations:1
+  kind: outputport
+  dataContract:
+    schema:
+    - name: numberOfCard
+      dataType: string
+      description: card number masked with asterisks
+    - name: codeOfProduct
+      dataType: string
+      description: product code
+    - name: nameOfProduct
+      dataType: string
+      description: product name
+    - name: stateOfCode
+      dataType: string
+      description: code's state
+    - name: descriptionOdCard
+      dataType: string
+      description: card's description
+    - name: branchOfAccount
+      dataType: string
+      description: account's branch
+    - name: numOfAccount
+      dataType: string
+      description: account number
+    - name: categoryOfAccount
+      dataType: string
+      description: account category

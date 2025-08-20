@@ -1,0 +1,29 @@
+id: urn:dmb:cmp:finance:bank-accounts:0
+kind: dataproduct
+environment: development
+name: bank accounts
+description: dataset containing basic information on customer bank accounts
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:bank-accounts:0:accounts-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: account_id
+      description: unique identifier of the bank account
+    - dataType: string
+      name: customer_id
+      description: identifier of the account holder
+    - dataType: string
+      name: account_type
+      description: type of account (e.g., checking, savings)
+    - dataType: number
+      name: balance
+      description: current available balance
+    - dataType: string
+      name: currency
+      description: currency in which the account operates
+    - dataType: date
+      name: opened_date
+      description: date when the account was opened

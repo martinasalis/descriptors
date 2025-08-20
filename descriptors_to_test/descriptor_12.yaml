@@ -1,0 +1,66 @@
+id: urn:dmb:cmp:finance:cashflow:1
+kind: dataproduct
+environment: development
+name: cashflow
+description: cashflow
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:cashflow:1:cashflow-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: ID
+      description: identifier of the cashflow
+    - dataType: string
+      name: Direction
+      description: direction of the cashflow
+    - dataType: number
+      name: Amount
+      description: amount of the cashflow
+- id: urn:dmb:cmp:finance:cashflow:1:cashflow-outputport:1
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      description: unique identifier for the transaction
+      name: transaction_id
+    - dataType: string
+      description: type of transaction (e.g., credit, debit)
+      name: transaction_type
+    - dataType: number
+      description: total amount of the transaction
+      name: transaction_amount
+    - dataType: string
+      description: currency used in the transaction
+      name: transaction_currency
+    - dataType: date
+      description: date when the transaction occurred
+      name: transaction_date
+    - dataType: string
+      description: identifier for the account involved in the transaction
+      name: account_id
+    - dataType: string
+      description: identifier for the customer involved in the transaction
+      name: customer_id
+    - dataType: string
+      description: status of the transaction (e.g., pending, completed)
+      name: transaction_status
+    - dataType: string
+      description: method used for the transaction (e.g., credit card, bank transfer)
+      name: transaction_method
+    - dataType: string
+      description: additional notes or comments about the transaction
+      name: transaction_notes
+    - dataType: string
+      description: the unique identifier for the cashflow record
+      name: cashflow_id
+    - dataType: string
+      description: the status of the cashflow (e.g., pending, completed)
+      name: status
+    - dataType: string
+      description: the method of payment (e.g., bank transfer, check)
+      name: payment_method
+    - dataType: string
+      description: additional notes or comments about the cashflow
+      name: notes

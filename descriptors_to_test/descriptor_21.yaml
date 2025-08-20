@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:finance:card-transactions:0
+kind: dataproduct
+environment: development
+name: card transactions
+description: dataset of credit and debit card transactions for financial analysis
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:card-transactions:0:card-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: transaction_id
+      description: unique identifier of the card transaction
+    - dataType: string
+      name: card_number_masked
+      description: masked number of the credit/debit card used
+    - dataType: string
+      name: card_type
+      description: type of card used (e.g., credit, debit, prepaid)
+    - dataType: date
+      name: transaction_date
+      description: date when the transaction took place
+    - dataType: string
+      name: merchant_category
+      description: category of the merchant where the card was used
+    - dataType: string
+      name: transaction_currency
+      description: currency in which the transaction was made
+    - dataType: number
+      name: transaction_amount
+      description: amount of the transaction
+    - dataType: string
+      name: transaction_status
+      description: status of the transaction (e.g., completed, declined, pending)
+    - dataType: string
+      name: country
+      description: country where the transaction occurred
+    - dataType: string
+      name: notes
+      description: optional comment about the transaction

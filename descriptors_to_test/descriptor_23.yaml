@@ -1,0 +1,35 @@
+id: urn:dmb:cmp:finance:personal-loans:0
+kind: dataproduct
+environment: development
+name: personal loans
+description: dataset with essential details on personal loans issued to customers
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:personal-loans:0:loan-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: loan_id
+      description: unique identifier of the personal loan
+    - dataType: number
+      name: quantity
+      description: number of units held for the asset
+    - dataType: string
+      name: currency
+      description: currency in which the asset is valued
+    - dataType: string
+      name: portfolio_id
+      description: unique identifier of the investment portfolio
+    - dataType: date
+      name: start_date
+      description: loan start date
+    - dataType: date
+      name: end_date
+      description: expected end date of the loan term
+    - dataType: string
+      name: strategy
+      description: investment strategy associated with the portfolio (e.g., growth, income)
+    - dataType: string
+      name: user
+      description: user identifier that created the record

@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:finance:loan-applications:0
+kind: dataproduct
+environment: development
+name: loan applications
+description: detailed data on customer loan applications and their evaluation
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:loan-applications:0:loan-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: application_id
+      description: unique identifier of the loan application
+    - dataType: string
+      name: customer_id
+      description: globally unique identifier of the customer applying for the loan
+    - dataType: string
+      name: loan_type
+      description: type of loan requested (e.g., mortgage, personal, auto)
+    - dataType: double
+      name: requested_amount
+      description: total loan amount requested by the customer
+    - dataType: date
+      name: application_date
+      description: the date on which the loan application was submitted
+    - dataType: string
+      name: evaluation_status
+      description: current status of the evaluation process (e.g., approved, rejected, pending)
+    - dataType: double
+      name: approved_amount
+      description: amount approved after evaluation
+    - dataType: date
+      name: decision_date
+      description: date when the final decision was made
+    - dataType: string
+      name: evaluator_id
+      description: identifier of the agent or algorithm that evaluated the request
+    - dataType: string
+      name: rejection_reason
+      description: reason for rejection if the loan was not approved

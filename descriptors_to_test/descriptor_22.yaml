@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:finance:investment-portfolio:0
+kind: dataproduct
+environment: development
+name: investment portfolio
+description: detailed data on customer investment holdings and portfolio composition
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:investment-portfolio:0:portfolio-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: portfolio_id
+      description: unique identifier of the investment portfolio
+    - dataType: string
+      name: investor_id
+      description: identifier of the investor or account owner
+    - dataType: string
+      name: asset_type
+      description: type of financial asset held (e.g., stock, bond, ETF)
+    - dataType: string
+      name: asset_symbol
+      description: symbol or ticker of the asset
+    - dataType: number
+      name: quantity
+      description: number of units held for the asset
+    - dataType: number
+      name: average_price
+      description: average purchase price per unit of the asset
+    - dataType: number
+      name: market_value
+      description: current market value of the holding
+    - dataType: string
+      name: currency
+      description: currency in which the asset is valued
+    - dataType: date
+      name: last_updated
+      description: date when the portfolio data was last refreshed
+    - dataType: string
+      name: strategy
+      description: investment strategy associated with the portfolio (e.g., growth, income)

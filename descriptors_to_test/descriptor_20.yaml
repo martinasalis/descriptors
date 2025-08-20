@@ -1,0 +1,41 @@
+id: urn:dmb:cmp:finance:invoice-tracking:0
+kind: dataproduct
+environment: development
+name: invoice tracking
+description: structured data on invoices issued and their payment status
+domain: finance
+components:
+- id: urn:dmb:cmp:finance:invoice-tracking:0:invoice-outputport:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: string
+      name: invoice_id
+      description: unique identifier of the invoice
+    - dataType: string
+      name: customer_id
+      description: identifier of the customer to whom the invoice was issued
+    - dataType: date
+      name: issue_date
+      description: date when the invoice was issued
+    - dataType: date
+      name: due_date
+      description: deadline for payment of the invoice
+    - dataType: string
+      name: currency
+      description: currency in which the invoice amount is expressed
+    - dataType: number
+      name: total_amount
+      description: total amount due for the invoice
+    - dataType: string
+      name: status
+      description: current status of the invoice (e.g., paid, overdue, pending)
+    - dataType: string
+      name: payment_reference
+      description: reference code for payment matching
+    - dataType: string
+      name: payment_method
+      description: method used for the invoice payment (e.g., wire transfer)
+    - dataType: string
+      name: notes
+      description: optional notes or comments about the invoice

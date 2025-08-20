@@ -1,0 +1,42 @@
+id: urn:dmb:cmp:customercare:customer-onboarding:2
+kind: dataproduct
+environment: development
+name: customer onboarding
+description: customer onboarding
+domain: customercare
+components:
+- id: urn:dmb:cmp:customercare:customer-onboarding:2:customer-onboarding-optimization:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: INT
+      description: global addressable identifier for a customer
+      name: client_id
+    - dataType: string
+      description: customer's first name
+      name: first_name
+    - dataType: STRING
+      description: customer's last name
+      name: last_name
+    - dataType: DATE
+      description: customer's birthdate
+      name: birthdate
+    - dataType: STRING
+      description: customer's gender
+      name: gender
+- id: urn:dmb:cmp:customercare:customer-onboarding:2:customer-onboarding-optimization:0
+  kind: outputport
+  dataContract:
+    schema:
+    - dataType: STRING
+      description: Current stage in the customer onboarding process
+      name: onboardingStage
+    - dataType: STRING
+      description: Optimization algorithm used for customer onboarding
+      name: optimizationAlgorithm
+    - dataType: DOUBLE
+      description: Score indicating the effectiveness of the onboarding process
+      name: onboardingScore
+    - dataType: STRING
+      description: Status of the optimization process
+      name: optimizationStatus
